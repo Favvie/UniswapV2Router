@@ -38,16 +38,16 @@
      }
 
 
-//     function joinGame(uint boardId) public {
-//         Ludoboard storage board = boards[boardId];
-//         board.noOfPlayersJoined++;
-//     }
+    function joinGame(uint boardId) public {
+        Ludoboard storage board = boards[boardId];
+        board.noOfPlayersJoined++;
+    }
 
-//     function rollDice(uint boardId) public {
+    function rollDice(uint boardId) public {
         uint randomNumber = uint256(keccak256(abi.encodePacked(
-//             msg.sender,
-//             gameNonce, 
-//             boardId
+            msg.sender,
+            gameNonce, 
+            boardId
         )));
         
          uint diceNumber =  uint8((randomNumber % 6) + 1);
